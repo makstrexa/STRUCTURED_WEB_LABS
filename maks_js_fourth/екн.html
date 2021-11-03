@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+    <title>Docs</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <SCRIPT>
+        function time_scroll()
+        {
+            var d = new Date();
+            window.status = d.getHours() +":"+d.getMinutes() +":"+
+                d.getSeconds();
+            setTimeout('time_scroll();',500);
+        }
+    </SCRIPT>
+</HEAD>
+<BODY onLoad=time_scroll()>
+
+    <H1>Часы в строке статуса</H1>
+</BODY>
+</HTML>

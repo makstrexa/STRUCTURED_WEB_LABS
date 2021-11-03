@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Docs</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="../css/reportstyle.css">
+</head>
+<body>
+<h1 align="center">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ <br> З ДИСЦИПЛІНИ "РОЗРОБЛЕННЯ
+    WEB-ЗАСТОСУВАНЬ"</h1>
+
+<h2 align="center">БРИГАДА №3 СТУДЕНТИ ГРУПИ ІА-01: <br> Мартюк Максим <br>
+    Лештаєв  Олександр <br> Шихненко Олександр
+    <br>
+    <span><button class="button button5"><a href="../teamphot/teamphot.html">PHOTOS</a></button></span></h2>
+
+<div align="center">
+    <span><button class="button button5"><a href="../lab1docs/theme.html">Лабораторна робота 1</a></button></span>
+    <span><button class="button button5"><a href="../lab2docs/indexlab2.html">Лабораторна робота 2</a></button></span>
+    <span><button class="button button5"><a href="">Лабораторна робота 3</a></button></span>
+    <span><button class="button button5"><a href="../lab4docs/themelab4.html">Лабораторна робота 4</a></button></span>
+    <span><button class="button button5">Лабораторна робота 5</button></span>
+    <span><button class="button button5">Лабораторна робота 6</button></span>
+    <span><button class="button button5">Лабораторна робота 7</button></span>
+    <span><button class="button button5">Лабораторна робота 8</button></span>
+    <span><button class="button button5">Лабораторна робота 9</button></span>
+    <br>
+</div>
+
+<div>
+    <span><button class="button button5"><a href="">Постановка задачі <br> Лабораторної роботи № 4</a></button></span><br>
+    <span><button class="button button5">Cпособи функціонального <br> застосування JS</button></span><br>
+    <ul>
+        <li><button class="button button5"><a href="url.html">Схема URL</a></button></li>
+        <li><button class="button button5"><a href="process.html">Обробка подій</a></button></li>
+        <li><button class="button button5"><a href="entity.html">Підстановка (entity)</a></button></li>
+        <li><button class="button button5"><a href="insert.html">Вставка (SCRIPT)</a></button></li>
+    </ul>
+    <span><button class="button button5"><a href="array.html">Массиви</a></button></span><br>
+    <span><button class="button button5"><a href="sixth.html">Виконання 6 пункту</a></button></span><br>
+    <span><button class="button button5"><a href="conclusion.html">Висновки</a></button></span><br>
+</div>
+
+<div class="content-wrapper"> <br>
+    <a href="../../maks_js_fourth/successhisto.html">Мартюк Гістограма</a> <br>
+    <xmp>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+                  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+                  crossorigin="anonymous">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            <title>JavaScript Histo</title>
+        </head>
+        <body>
+
+        <div class="container">
+            <br>
+            <br>
+            <h2>Histogram</h2>
+            <div class="form-group">
+                <br>
+                <label><b>Enter the values seperated by a space</b></label>
+                <input type="text"class="form-control" id="num" value="10 20 30 40 50">
+                <br>
+                <button class="btn btn-primary btn-primary" id = "submit" onclick="draw()">Submit</button>
+                <button class="btn btn-primary btn-primary" id = "clear" onclick="reset()">Clear</button>
+                <br>
+                <br>
+                <canvas id="myCanvas" style="border:1px solid #c3c3c3; width: 70%; align-content: center"></canvas>
+            </div>
+        </div>
+
+        </body>
+        <script>
+
+            function reset(){
+
+                var inputs = document.getElementsByTagName("input");
+                for(var i = 0; i< inputs.length; i++)
+                    inputs[i].value = '';
+
+                var canvas = document.getElementById('myCanvas');
+                var ctx = canvas.getContext('2d');
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                window.location.reload();
+
+            }
+
+            function draw(){
+
+                let n = document.getElementById("num").value.split(/\s/);
+                console.log(n);
+
+                let canvas = document.getElementById('myCanvas');
+                let ctx = canvas.getContext('2d');
+                let width = 40;
+                let X = 30;
+                let base = 200;
+
+                for (let i = 0; i < n.length; i++) {
+                    ctx.fillStyle = '#008080';
+                    let h = n[i];
+                    ctx.fillRect(X,canvas.height - h,width,h);
+                    X += width + 15;
+                    ctx.fillStyle = '#4da6ff';
+                    ctx.fillText(h, X - 50, canvas.height - h -10);
+                }
+                ctx.fillStyle = '#000000';
+                ctx.fillText('Scale X : ' + canvas.width + ' Y : ' + canvas.height,800,10);
+
+            }
+        </script>
+        </html>
+    </xmp>
+    <br>
+    <a href="sasha1.html">Шихненко</a>
+    <xmp>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+
+            <div>
+                <button data-tooltip="Перезагрузить страницу" onClick="window.location.reload();">Refresh Page</button>
+            </div>
+
+            <script>
+                let tooltipElem;
+
+                document.onmouseover = function(event) {
+                    let target = event.target;
+
+                    // если у нас есть подсказка...
+                    let tooltipHtml = target.dataset.tooltip;
+                    if (!tooltipHtml) return;
+
+                    // ...создадим элемент для подсказки
+
+                    tooltipElem = document.createElement('div');
+                    tooltipElem.className = 'tooltip';
+                    tooltipElem.innerHTML = tooltipHtml;
+                    document.body.append(tooltipElem);
+
+                    // спозиционируем его сверху от аннотируемого элемента (top-center)
+                    let coords = target.getBoundingClientRect();
+
+                    let left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) / 2;
+                    if (left < 0) left = 0; // не заезжать за левый край окна
+
+                    let top = coords.top - tooltipElem.offsetHeight - 5;
+                    if (top < 0) { // если подсказка не помещается сверху, то отображать её снизу
+                        top = coords.top + target.offsetHeight + 5;
+                    }
+
+                    tooltipElem.style.left = left + 'px';
+                    tooltipElem.style.top = top + 'px';
+                };
+
+                document.onmouseout = function(e) {
+
+                    if (tooltipElem) {
+                        tooltipElem.remove();
+                        tooltipElem = null;
+                    }
+
+                };
+            </script>
+
+            <script>
+                let amount = Number(prompt('Введите первое число'));
+                const generateArray = (amount) => {
+                    return new Array(amount).fill(0).map(el => Math.round(Math.random(1) * 100));
+                }
+
+                const findLowestNum = (arr) => {
+                    const smallest = arr.slice(0).sort((a, b) => a - b)[0];
+                    const resultArr = arr.filter(el => el !== smallest).reduce((acc, cur, ind) => { acc[ind + 1] = cur;
+                        return acc }, [])
+                    resultArr[0] = smallest
+                    return resultArr
+                }
+
+
+                document.write(findLowestNum(generateArray(amount)))
+            </script>
+
+        </head>
+        <body>
+
+        </body>
+        </html>
+    </xmp>
+    <a href="slide.html">Лештаєв</a>
+    <xmp>
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Название документа</title>
+
+            <link rel="stylesheet" href = "view.css">
+        </head>
+        <body>
+        <ul id="slides">
+            <li class="slide showing">Slide 1</li>
+            <li class="slide">Slide 2</li>
+            <li class="slide">Slide 3</li>
+            <li class="slide">Slide 4</li>
+            <li class="slide">Slide 5</li>
+        </ul>
+
+        <button class="controls" id="pause">Pause</button>
+        <script>
+            var slides = document.querySelectorAll('#slides .slide');
+            var currentSlide = 0;
+            var slideInterval = setInterval(nextSlide,2000);
+
+            function nextSlide(){
+                slides[currentSlide].className = 'slide';
+                currentSlide = (currentSlide+1)%slides.length;
+                slides[currentSlide].className = 'slide showing';
+            }
+
+            var playing = true;
+            var pauseButton = document.getElementById('pause');
+
+            function pauseSlideshow(){
+                pauseButton.innerHTML = 'Play';
+                playing = false;
+                clearInterval(slideInterval);
+            }
+
+            function playSlideshow(){
+                pauseButton.innerHTML = 'Pause';
+                playing = true;
+                slideInterval = setInterval(nextSlide,2000);
+            }
+
+            pauseButton.onclick = function(){
+                if(playing){ pauseSlideshow(); }
+                else{ playSlideshow();}
+            };
+        </script>
+        </body>
+        </html>
+    </xmp>
+</div>
+
+</body>
+</html>

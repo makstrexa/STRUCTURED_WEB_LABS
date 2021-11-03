@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>JavaScript Histo</title>
+</head>
+<body>
+
+<div class="container">
+  <br>
+  <br>
+  <h2>Histogram</h2>
+  <div class="form-group">
+    <br>
+    <label><b>Enter the values seperated by a space</b></label>
+    <input type="text"class="form-control" id="num" value="10 20 30 40 50">
+    <br>
+    <button class="btn btn-primary btn-primary" id = "submit" onclick="draw()">Submit</button>
+    <button class="btn btn-primary btn-primary" id = "clear" onclick="reset()">Clear</button>
+    <br>
+    <br>
+    <canvas id="myCanvas" style="border:1px solid #c3c3c3; width: 70%; align-content: center"></canvas>
+  </div>
+</div>
+
+</body>
+<script>
+
+  function reset(){
+
+    var inputs = document.getElementsByTagName("input");
+    for(var i = 0; i< inputs.length; i++)
+      inputs[i].value = '';
+
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    window.location.reload();
+
+  }
+
+  function draw(){
+
+    let n = document.getElementById("num").value.split(/\s/);
+    console.log(n);
+
+    let canvas = document.getElementById('myCanvas');
+    let ctx = canvas.getContext('2d');
+    let width = 40;
+    let X = 30;
+    let base = 200;
+
+    for (let i = 0; i < n.length; i++) {
+      ctx.fillStyle = '#008080';
+      let h = n[i];
+      ctx.fillRect(X,canvas.height - h,width,h);
+      X += width + 15;
+      ctx.fillStyle = '#4da6ff';
+      ctx.fillText(h, X - 50, canvas.height - h -10);
+    }
+    ctx.fillStyle = '#000000';
+    ctx.fillText('Scale X : ' + canvas.width + ' Y : ' + canvas.height,800,10);
+
+  }
+</script>
+</html>

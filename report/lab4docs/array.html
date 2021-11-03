@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Docs</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="../css/reportstyle.css">
+</head>
+<body>
+<h1 align="center">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ <br> З ДИСЦИПЛІНИ "РОЗРОБЛЕННЯ
+    WEB-ЗАСТОСУВАНЬ"</h1>
+
+<h2 align="center">БРИГАДА №3 СТУДЕНТИ ГРУПИ ІА-01: <br>
+    Мартюк Максим <br>
+    Лештаєв  Олександр <br>
+    Шихненко Олександр <br>
+    <span><button class="button button5"><a href="../teamphot/teamphot.html">PHOTOS</a></button></span>
+</h2>
+
+<div align="center">
+    <span><button class="button button5"><a href="../lab1docs/theme.html">Лабораторна робота 1</a></button></span>
+    <span><button class="button button5"><a href="../lab2docs/indexlab2.html">Лабораторна робота 2</a></button></span>
+    <span><button class="button button5"><a href="">Лабораторна робота 3</a></button></span>
+    <span><button class="button button5"><a href="../lab4docs/themelab4.html">Лабораторна робота 4</a></button></span>
+    <span><button class="button button5"><a href="../lab5docs/theme.html">Лабораторна робота 5</a></button></span>
+    <span><button class="button button5">Лабораторна робота 6</button></span>
+    <span><button class="button button5">Лабораторна робота 7</button></span>
+    <span><button class="button button5">Лабораторна робота 8</button></span>
+    <span><button class="button button5">Лабораторна робота 9</button></span>
+    <br>
+</div>
+
+<div>
+    <span><button class="button button5"><a href="themelab4.html">Постановка задачі <br> Лабораторної роботи № 4</a></button></span><br>
+    <span><button class="button button5">Cпособи функціонального <br> застосування JS</button></span><br>
+    <ul>
+        <li><button class="button button5"><a href="url.html">Схема URL</a></button></li>
+        <li><button class="button button5"><a href="process.html">Обробка подій</a></button></li>
+        <li><button class="button button5"><a href="entity.html">Підстановка (entity)</a></button></li>
+        <li><button class="button button5"><a href="insert.html">Вставка (SCRIPT)</a></button></li>
+    </ul>
+    <span><button class="button button5"><a href="array.html">Массиви</a></button></span><br>
+    <span><button class="button button5"><a href="sixth.html">Виконання 6 пункту</a></button></span><br>
+    <span><button class="button button5"><a href="conclusion.html">Висновки</a></button></span><br>
+</div>
+
+<div class="content-wrapper"> <br>
+
+    Масиви в мові JavaScript - це спеціалізована форма об'єктів,
+    а індекси масивів означають трохи більше, ніж просто імена властивостей, які по збігу є цілими числами.
+    Масиви в мові JavaScript є нетипізованими: елементи масиву можуть мати будь-який тип, причому різні
+    елементи одного і того ж масиву можуть мати різні типи. Елементи масиву можуть навіть бути об'єктами
+    або іншими масивами, що дозволяє створювати складні структури даних, такі як масиви об'єктів і масиви масивів.
+    Відлік індексів масивів в мові JavaScript починається з нуля і для них використовуються
+    32-бітові цілі числа - перший елемент масиву має індекс 0. Масиви в JavaScript є динамічними:
+    вони можуть збільшуватися і зменшуватися в розмірах у міру необхідності; немає необхідності
+    оголошувати фіксовані розміри масивів при їх створенні або повторно розподіляти пам'ять при зміні їх розмірів.
+
+    <br>
+    <a href="../../maks_js_fourth/arrays.html">Мартюк</a>
+    <br>
+    <img src="img/maksarrays/html.png" alt="">
+    <xmp>
+        let array = [1, 6, 3, 8, -9, 0, -4, -8];
+        let max = getMaxValue(array);
+        let min = getMinValue(array);
+
+        document.write("< p>min among positive:< /p>")
+        document.write(max)
+
+        document.write("< p>max among negative:< /p>")
+        document.write(min)
+
+        selectionSort(array)
+        array.reverse();
+        document.write("< br>")
+        document.write(array);
+
+        function selectionSort(inputArr) {
+        let n = inputArr.length;
+
+        for(let i = 0; i < n; i++) {
+            let min = i;
+            for(let j = i; j < n; j++) {
+                if(inputArr[j] < inputArr[min]) {
+                min=j;
+            }
+        }
+        if (min != i) {
+            let tmp = inputArr[i];
+            inputArr[i] = inputArr[min];
+            inputArr[min] = tmp;
+            }
+        }
+        return inputArr;
+        }
+
+        function getMaxValue(array){
+        let max;
+        for (let i = 0; i , array.length; i++) {
+        if (array[i] >= 0) {
+        max = array[i];
+        break;
+        }
+        }
+        for (let i = 0; i < array.length; i++) {
+        if (max > array[i] && array[i] >= 0)
+        max = array[i];
+        }
+        return max;
+        }
+
+        function getMinValue(array){
+        let min;
+        for (let i = 0; i , array.length; i++) {
+        if (array[i] < 0) {
+        min = array[i];
+        break;
+        }
+        }
+        for (let i = 0; i < array.length; i++) {
+        if (min < array[i] && array[i] < 0)
+        min = array[i];
+        }
+        return min;
+        }
+    </xmp>
+
+    <a href="sasha1.html">Шихненко</a>
+    <xmp>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+
+            <div>
+                <button data-tooltip="Перезагрузить страницу" onClick="window.location.reload();">Refresh Page</button>
+            </div>
+
+            <script>
+                let tooltipElem;
+
+                document.onmouseover = function(event) {
+                    let target = event.target;
+
+                    // если у нас есть подсказка...
+                    let tooltipHtml = target.dataset.tooltip;
+                    if (!tooltipHtml) return;
+
+                    // ...создадим элемент для подсказки
+
+                    tooltipElem = document.createElement('div');
+                    tooltipElem.className = 'tooltip';
+                    tooltipElem.innerHTML = tooltipHtml;
+                    document.body.append(tooltipElem);
+
+                    // спозиционируем его сверху от аннотируемого элемента (top-center)
+                    let coords = target.getBoundingClientRect();
+
+                    let left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) / 2;
+                    if (left < 0) left = 0; // не заезжать за левый край окна
+
+                    let top = coords.top - tooltipElem.offsetHeight - 5;
+                    if (top < 0) { // если подсказка не помещается сверху, то отображать её снизу
+                        top = coords.top + target.offsetHeight + 5;
+                    }
+
+                    tooltipElem.style.left = left + 'px';
+                    tooltipElem.style.top = top + 'px';
+                };
+
+                document.onmouseout = function(e) {
+
+                    if (tooltipElem) {
+                        tooltipElem.remove();
+                        tooltipElem = null;
+                    }
+
+                };
+            </script>
+
+            <script>
+                let amount = Number(prompt('Введите первое число'));
+                const generateArray = (amount) => {
+                    return new Array(amount).fill(0).map(el => Math.round(Math.random(1) * 100));
+                }
+
+                const findLowestNum = (arr) => {
+                    const smallest = arr.slice(0).sort((a, b) => a - b)[0];
+                    const resultArr = arr.filter(el => el !== smallest).reduce((acc, cur, ind) => { acc[ind + 1] = cur; return acc }, [])
+                    resultArr[0] = smallest
+                    return resultArr
+                }
+
+
+                document.write(findLowestNum(generateArray(amount)))
+            </script>
+
+        </head>
+        <body>
+
+        </body>
+        </html>
+    </xmp>
+    <a href="lesh_arr.html">Лештаєв</a>
+    <xmp>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Title</title>
+            <style>
+                body {
+                    font-size: 30px;
+                }
+            </style>
+        </head>
+        <body>
+
+        <p>Створити одновимірний масив, кількість елементів якого задана користувачем.<br>
+            Визначити максимальне та мінімальне значення серед елементів із парними та непарними номерами.<br>
+            Упорядкувати масив у порядку зменшення методом вибору. Надрукувати вхідний та вихідний масив.<br>
+            Застосувати функції</p><br>
+
+
+        <div>
+            <p>Enter size of future random array:</p>
+            <form id="formIdName">
+                <label for="arr_size">Size:</label>
+                <input type="number" id="arr_size"/>
+                <p id="add_button" onClick="arr()">submit</p>
+            </form>
+            <div  id="dnone">
+                Random array:
+                <p id="random_arr"></p>
+                Result array:<br>
+                <p id="sorted_arr"></p>
+                2n+1 min and max:
+                <p id="n-th"></p><br>
+                2n min and max:
+                <p id="2n-th"></p>
+            </div>
+        </div>
+
+        <script>
+            function arr() {
+                document.getElementById('dnone').classList.remove('d-none');
+                const adduser_input = document.getElementById('arr_size').value;
+                var rand_arr = Array(parseInt(adduser_input))
+                    .fill()
+                    .map(() => Math.round(1_000 * Math.random()));
+                document.getElementById('random_arr').innerText = '[' + rand_arr.toString() + ']';
+                var sorted_arr = selectionSort(rand_arr);
+                document.getElementById('sorted_arr').innerText = '[' + sorted_arr.toString() + ']';
+                var nth;
+                var n2th;
+                if (sorted_arr.length < 4) {
+                    nth = 'array is small(';
+                    n2th = 'array is small(';
+                } else {
+                    if (sorted_arr.length % 2 === 0) {
+                        nth = sorted_arr[sorted_arr.length - 2] + ' ' + sorted_arr[1];
+                        n2th = sorted_arr[sorted_arr.length - 1] + ' ' + sorted_arr[0];
+                    } else {
+                        nth = sorted_arr[sorted_arr.length - 1] + ' ' + sorted_arr[1];
+                        n2th = sorted_arr[sorted_arr.length - 2] + ' ' + sorted_arr[0];
+                    }
+                }
+                document.getElementById('n-th').innerText = '[' + nth + ']';
+                document.getElementById('2n-th').innerText = '[' + n2th + ']';
+            }
+
+            function selectionSort(inputArr) {
+                let n = inputArr.length;
+
+                for (let i = 0; i < n; i++) {
+                    let min = i;
+                    for (let j = i + 1; j < n; j++) {
+                        if (inputArr[j] > inputArr[min]) {
+                            min = j;
+                        }
+                    }
+                    if (min !== i) {
+                        let tmp = inputArr[i];
+                        inputArr[i] = inputArr[min];
+                        inputArr[min] = tmp;
+                    }
+                }
+                return inputArr;
+            }
+        </script>
+
+        </body>
+        </html>
+    </xmp>
+
+</div>
+
+</body>
+</html>

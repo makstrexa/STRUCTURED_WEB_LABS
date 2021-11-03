@@ -1,0 +1,136 @@
+*{
+    margin:auto;
+    padding:auto;
+}
+.top{
+    width:100%;
+    background-color: #58eb2f;
+    border-bottom:2px solid #f0f0f0;
+}
+.top div{
+    width:1200px;
+    color:#fff;
+    background-color: #58eb2f;
+    font-family:calibri;
+    padding:10px;
+    text-align:right;
+}
+#id {
+    font-size: 14px;
+}
+
+
+.navigation{
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.nav_style{
+    display: inline-block;
+    vertical-align: top;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.2s linear;
+    margin: 10px;
+    
+}
+
+.nav_style:hover {
+  color: #32CD32;
+ }
+
+.middle{
+    width:100%;
+    border-bottom:2px solid #f0f0f0;
+}
+.middle div{
+    width:1200px;
+    height:400px;
+    font-family:calibri;
+}
+.middle div p {
+    width:1000px;
+    font-weight:bold;
+    height:300px;
+    color:#fff;
+    opacity:0.2;
+    font-size:50px;
+    background-color:#000;
+}
+
+.bottom{
+    width:100%;
+    background-color: white;
+    border-bottom:2px solid #f0f0f0;
+}
+.bottom div{
+    width:1200px;
+    color:#fff;
+    background-color: #b1d99c;
+    font-family:calibri;
+    text-align:left;
+
+}
+
+
+.bottom_up{
+    width:100%;
+    background-color: #b1d99c;
+    border-bottom:2px solid #f0f0f0;
+}
+.bottom_up div{
+    padding-top:20px;
+    width:1200px;
+    text-align:center;
+    background-color: #b1d99c;
+    font-family:forte;
+    font-size:30px;
+    padding-bottom:20px;
+}
+.bottom_up div table{
+    padding-top:30px;
+    font-size:30px;
+    width:1100px;
+    text-align:center;
+    background-color: #b1d99c;
+    font-family:calibri;
+
+}
+
+input[type="text"]{
+    padding:12px;
+    width:250px;
+}
+select{
+    padding:12px;
+    width:250px;
+}
+textarea{
+    padding:50px;
+    width:550px;
+}
+button{
+    width:550px;
+    padding:10px;
+    color:#fff;
+    font-size:20px;
+    background-color:#58eb2f;
+}
+
+
+.nav_down{
+    width:100%;
+    background-color:#58eb2f;
+    border-bottom:2px solid #f0f0f0;
+}
+.nav_down div{
+    width:1200px;
+    color:#fff;
+    background-color:#000;
+    font-family:calibri;
+    padding:10px;
+    text-align:left;
+}
+
+ 

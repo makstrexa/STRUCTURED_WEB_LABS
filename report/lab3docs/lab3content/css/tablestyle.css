@@ -1,0 +1,39 @@
+body, html {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 30px;
+}
+
+.table-wrapper {
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    height: 20%;
+    width: 75%;
+    background-color: #3d3c66;
+}
+
+.left-sidebar {
+    width: 15%;
+    background-color: #3d3c66;
+}
+
+.right-sidebar {
+    width: 15%;
+    background-color: #3d3c66;
+}
+
+.content {
+    width: 45%;
+    background-color: #3d3c66;
+}
+
+.footer {
+    height: 20%;
+    background-color: #3d3c66;
+}

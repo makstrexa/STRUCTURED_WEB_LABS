@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-dark">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4</title>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type='text/javascript' src='../../js/brig/unitegallery/dist/js/unitegallery.min.js'></script>
+    <link rel='stylesheet' href='../../js/brig/unitegallery/dist/css/unite-gallery.css' type='text/css'/>
+    <script type='text/javascript' src='../../js/brig/unitegallery/dist/themes/carousel/ug-theme-carousel.js'></script>
+    <script type='text/javascript' src='../../js/brig/unitegallery/dist/themes/tiles/ug-theme-tiles.js'></script>
+    <script type='text/javascript' src='../../js/brig/unitegallery/dist/themes/slider/ug-theme-slider.js'></script>
+    <script type='text/javascript' src='../../js/brig/unitegallery/dist/themes/default/ug-theme-default.js'></script>
+    <link rel='stylesheet' href='../../js/brig/unitegallery/dist/themes/default/ug-theme-default.css' type='text/css'/>
+
+</head>
+
+<body class="overflow-auto">
+<div class="container-fluid text-center p-5 bg-dark text-monospace h-100 w-100">
+
+    <p class="container bg-warning mt-3 p-2 h2">Videoslyder</p>
+
+    <div id="gallery3" style="display:none;">
+
+        <div data-type="youtube"
+             data-videoid="f5j1TaJlc0w"
+             data-title="Ogon"
+             data-description="Oh yeee"></div>
+
+        <div data-type="youtube"
+             data-videoid="J-S8ieP9L40"
+             data-title="GoPro Demo"
+             data-description="by Go Pro"></div>
+
+
+        <div data-type="youtube"
+             data-videoid="8ZPsZBcue50"
+             data-title="Vikings"
+             data-description="Viking's music"></div>
+
+        <div data-type="youtube"
+             data-videoid="AUm23lsBh24"
+             data-title="Bard's music"
+             data-description="Bard's music"></div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+    jQuery("#gallery3").unitegallery({
+        gallery_theme: "slider"
+    });
+
+</script>
+
+</body>
+</html>

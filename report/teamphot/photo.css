@@ -1,0 +1,21 @@
+
+.imgblock {
+    position: relative;
+    display: inline-block;
+}
+
+.imgblock img {
+    height: 700px;
+    width: 100%;
+}
+.imgblock span {
+    /*background: rgba(0,0,0,0.7); (полупрозрачность)*/
+    background: #222;
+    color: #f87e03;
+    border-radius: 2px;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    font-size: 18px;
+    padding: 3px 5px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Docs</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="../css/reportstyle.css">
+</head>
+<body>
+<h1 align="center">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ <br> З ДИСЦИПЛІНИ "РОЗРОБЛЕННЯ
+    WEB-ЗАСТОСУВАНЬ"</h1>
+
+<h2 align="center">БРИГАДА №3 СТУДЕНТИ ГРУПИ ІА-01: <br>
+    Мартюк Максим <br>
+    Лештаєв  Олександр <br>
+    Шихненко Олександр <br>
+    <span><button class="button button5"><a href="../teamphot/teamphot.html">PHOTOS</a></button></span>
+</h2>
+
+<div align="center">
+    <span><button class="button button5"><a href="../lab1docs/theme.html">Лабораторна робота 1</a></button></span>
+    <span><button class="button button5"><a href="../lab2docs/indexlab2.html">Лабораторна робота 2</a></button></span>
+    <span><button class="button button5"><a href="">Лабораторна робота 3</a></button></span>
+    <span><button class="button button5"><a href="../lab4docs/themelab4.html">Лабораторна робота 4</a></button></span>
+    <span><button class="button button5">Лабораторна робота 5</button></span>
+    <span><button class="button button5">Лабораторна робота 6</button></span>
+    <span><button class="button button5">Лабораторна робота 7</button></span>
+    <span><button class="button button5">Лабораторна робота 8</button></span>
+    <span><button class="button button5">Лабораторна робота 9</button></span>
+    <br>
+</div>
+
+<div>
+    <span><button class="button button5"><a href="themelab4.html">Постановка задачі <br> Лабораторної роботи № 4</a></button></span><br>
+    <span><button class="button button5">Cпособи функціонального <br> застосування JS</button></span><br>
+    <ul>
+        <li><button class="button button5"><a href="url.html">Схема URL</a></button></li>
+        <li><button class="button button5"><a href="process.html">Обробка подій</a></button></li>
+        <li><button class="button button5"><a href="entity.html">Підстановка (entity)</a></button></li>
+        <li><button class="button button5"><a href="insert.html">Вставка (SCRIPT)</a></button></li>
+    </ul>
+    <span><button class="button button5"><a href="array.html">Массиви</a></button></span><br>
+    <span><button class="button button5"><a href="sixth.html">Виконання 6 пункту</a></button></span><br>
+    <span><button class="button button5"><a href="conclusion.html">Висновки</a></button></span><br>
+</div>
+
+<div class="content-wrapper"> <br>
+
+    Такі програми, як обробники подій, вказуються в атрибутах контейнерів, з якими ці події пов'язані.
+    Наприклад, при натисканні на кнопку відбувається подія Click і відповідно викликається обробник цієї події onClick.
+    А в момент завершення повного завантаження документа (він пов'язаний з контейнером < body>)
+    відбувається подія Load і, відповідно, буде викликаний оброблювач цієї події onLoad. <br> <br>
+
+    <script>
+        function countRabbits() {
+            for(let i=1; i <= 3; i++) {
+                alert("Кролик номер " + i);
+            }
+        }
+    </script>
+    <input type="button" onclick="countRabbits()" value="Считать кроликов!">
+
+    <xmp>
+        <script>
+            function countRabbits() {
+                for(let i=1; i<=3; i++) {
+                    alert("Кролик номер " + i);
+                }
+            }
+        </script>
+        <input type="button" onclick="countRabbits()" value="Считать кроликов!">
+    </xmp>
+
+</div>
+
+</body>
+</html>
